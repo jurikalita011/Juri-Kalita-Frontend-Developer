@@ -1,7 +1,45 @@
 import React from "react";
 import logo from "../../assets/TopSection/logo.svg";
+import { useWeb3Modal } from "@web3modal/wagmi/react";
+import { createWeb3Modal } from "@web3modal/wagmi/react";
+import { defaultWagmiConfig } from "@web3modal/wagmi/react/config";
+import { arbitrum, mainnet } from "wagmi/chains";
+import { QueryClient } from "@tanstack/react-query";
+
+// 0. Setup queryClient
+const queryClient = new QueryClient();
+
+const projectId = "90942699b33a7c47b09a4d1dd26ea59a";
+
+// 2. Create wagmiConfig
+const metadata = {
+  name: "Web3Modal",
+  description: "Web3Modal Example",
+  url: "https://web3modal.com",
+  icons: ["https://avatars.githubusercontent.com/u/37784886"],
+};
+
+const chains = [mainnet, arbitrum] as const;
+const config = defaultWagmiConfig({
+  chains, // required
+  projectId, // required
+  metadata, // required
+  enableWalletConnect: true, // Optional - true by default
+  enableInjected: true, // Optional - true by default
+  enableEIP6963: true, // Optional - true by default
+  enableCoinbase: true, // Optional - true by default
+  // Any additional options can be provided here
+});
+
+// 3. Create modal
+createWeb3Modal({
+  wagmiConfig: config,
+  projectId,
+  enableAnalytics: true, // Optional
+});
 
 export const NavBar = () => {
+  const { open } = useWeb3Modal();
   return (
     <div className="flex justify-center items-center m-[40px]">
       <div
@@ -36,11 +74,14 @@ export const NavBar = () => {
               </p>
             </div>
           </div>
-          <div className="w-[23.58%] h-[55px] flex items-center justify-center rounded-[10px] bg-[#F9D326]">
+          <button
+            onClick={() => open()}
+            className="w-[23.58%] h-[55px] flex items-center justify-center rounded-[10px] bg-[#F9D326]"
+          >
             <p className="w-[70.05%] h-[17px] font-medium text-center">
               Connect Wallet
             </p>
-          </div>
+          </button>
         </div>
       </div>
     </div>
