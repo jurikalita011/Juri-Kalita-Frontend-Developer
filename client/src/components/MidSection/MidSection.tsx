@@ -4,7 +4,7 @@ import { OurTokens } from "./OurTokens";
 
 export const MidSection = () => {
   return (
-    <div className="w-full h-[3359px] border-2 border-yellow-500">
+    <div className="w-full h-[3359px] border-2 border-violet-500">
       <OurProducts />
       <OurTokens />
     </div>

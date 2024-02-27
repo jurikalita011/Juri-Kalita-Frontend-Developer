@@ -51,9 +51,9 @@ export const OurProducts = () => {
           Pellentesque habitant morbi.
         </p>
       </div>
-      <div className="w-full flex justify-center items-center m-8">
+      <div className="w-full flex justify-center items-center my-8">
         <div className="w-[80%] py-0 px-16">
-          <div className="grid grid-cols-3 gap-12 border-2 border-green-100">
+          <div className="grid grid-cols-3 gap-12 border-2 justify-self-center border-green-100">
             {productsData?.map((product, ind) => (
               <ProductsCard {...product} key={ind} />
             ))}

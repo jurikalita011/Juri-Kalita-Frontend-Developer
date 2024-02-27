@@ -36,8 +36,10 @@ export const NavBar = () => {
               </p>
             </div>
           </div>
-          <div className="w-[23.58%] h-[55px] flex items-center justify-center border-2 border-pink-600 rounded-[10px] bg-[#F9D326]">
-            <p className="w-[70.05%] h-[17px] text-center">Connect Wallet</p>
+          <div className="w-[23.58%] h-[55px] flex items-center justify-center rounded-[10px] bg-[#F9D326]">
+            <p className="w-[70.05%] h-[17px] font-medium text-center">
+              Connect Wallet
+            </p>
           </div>
         </div>
       </div>
