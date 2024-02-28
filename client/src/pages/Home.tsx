@@ -6,8 +6,6 @@ import { BottomSection } from "../components/BottomSection/BottomSection";
 import { NavBar } from "../components/TopSection/NavBar";
 import cube from "../assets/Animation/cubeTop.svg";
 
-import oval from "../assets/Animation/oval.svg";
-
 export const Home = () => {
   return (
     <div className="flex justify-center items-center bg-[#0E0E0E] relative">
