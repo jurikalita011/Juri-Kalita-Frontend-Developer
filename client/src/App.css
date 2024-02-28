@@ -21,5 +21,6 @@
 }
 
 .hover-effect:hover {
+  cursor: pointer;
   animation: jump-rotate 0.8s ease-in-out;
 }
