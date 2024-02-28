@@ -1,6 +1,41 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-export const OurTokens = () => {
+import { Token } from "../../constants";
+import { TokenCard } from "./TokenCard";
+
+export const OurTokens: React.FC = () => {
+  const [tokensData, setTokensData] = useState<Token[]>([]);
+  const [page, setPage] = useState<number>(1);
+  const [lastPage, setLastPage] = useState<number>(0);
+
+  const getTokens = async () => {
+    try {
+      let res = await fetch(
+        `https://bituniverse-api-template.onrender.com/tokens?page=${page}&limit=6`
+      );
+      let data = await res.json();
+      console.log("Fetched data:", data);
+      setTokensData(data.data);
+      setLastPage(Math.ceil(data.data.length / 6));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  console.log(tokensData, tokensData.length);
+
+  const handlePrevButton = () => {
+    setPage((prev) => prev - 1);
+  };
+
+  const handleNextButton = () => {
+    setPage((prev) => prev + 1);
+  };
+
+  useEffect(() => {
+    getTokens();
+  }, [page]);
+
   return (
     <div className="w-full h-[1454px] py-[60px] px-0 my-[60px] border-2 border-cyan-500">
       <div className="w-full h-[135px] px-30 py-0 flex flex-col justify-center items-center gap-6 border-2 border-pink-500">
@@ -16,6 +51,49 @@ export const OurTokens = () => {
           Pellentesque habitant morbi tristique senectus et netus et
           Pellentesque habitant morbi.
         </p>
+      </div>
+      <div className="flex flex-col gap-[20px] m-[50px]">
+        <div>
+          <div className="text-4xl flex justify-center m-[20px]">
+            Our <span className="text-main-yellow">Tokens</span>
+          </div>
+          <div className="flex justify-center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+            hic nobis ducimus magnam placeat aperiam error. Laborum, culpa.
+          </div>
+        </div>
+        <div className="flex justify-center items-center">
+          <div className="w-[85%]">
+            <div className="grid grid-cols-3 gap-12">
+              {tokensData?.map((token, ind) => (
+                <TokenCard key={ind} {...token} />
+              ))}
+            </div>
+            <div className="flex w-full justify-evenly mt-10">
+              <div className="shadow-xl">
+                <button
+                  className="text-black bg-white rounded-md py-2 px-4 w-[100px]"
+                  onClick={handlePrevButton}
+                  disabled={page === 1}
+                >
+                  Previous
+                </button>
+              </div>
+              <span className="text-white">
+                Page {page} of {lastPage}
+              </span>
+              <div className="shadow-xl">
+                <button
+                  className="text-black bg-white rounded-md py-2 px-4 w-[100px]"
+                  onClick={handleNextButton}
+                  disabled={page === lastPage}
+                >
+                  Next
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
