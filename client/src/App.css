@@ -4,6 +4,58 @@
   text-align: center;
 }
 
+/*--------------------------------------------------------------X---Top Heading---X--------------------------------------------------------------------------*/
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(-40%);
+  }
+  50% {
+    transform: translateX(20%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.text-move {
+  animation: moveRight 2s ease-in-out;
+}
+
+.text-move-2 {
+  animation: moveLeft 2s ease-in-out;
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(30%);
+  }
+  50% {
+    transform: translateX(-20%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.img-move {
+  animation: moveTop 2s ease-in-out;
+}
+
+@keyframes moveTop {
+  0% {
+    transform: translateY(50%);
+  }
+  50% {
+    transform: translateY(-20%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+/*--------------------------------------------------------------X---Product Card---X--------------------------------------------------------------------------*/
+
 .jump-animation img {
   animation: jump-rotate 0.8s ease-in-out;
 }
@@ -23,4 +75,57 @@
 .hover-effect:hover {
   cursor: pointer;
   animation: jump-rotate 0.8s ease-in-out;
+}
+
+/*--------------------------------------------------------------X---Floating Images---X--------------------------------------------------------------------------*/
+.floating-cube {
+  animation: floatAnimationCube 3s infinite alternate;
+}
+
+@keyframes floatAnimationCube {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 10px);
+  }
+}
+
+.floating-seven {
+  animation: floatAnimationSeven 3s infinite alternate;
+}
+
+@keyframes floatAnimationSeven {
+  0% {
+    transform: translate(0, -45%);
+  }
+  100% {
+    transform: translate(10px, -50%);
+  }
+}
+
+.floating-cube-mid {
+  animation: floatAnimationCubeMid 3s infinite alternate;
+}
+
+@keyframes floatAnimationCubeMid {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 10px);
+  }
+}
+
+.floating-oval {
+  animation: floatAnimationOval 3s infinite alternate;
+}
+
+@keyframes floatAnimationOval {
+  0% {
+    transform: translateY(-50%) translateX(0);
+  }
+  100% {
+    transform: translateY(-40%) translateX(0);
+  }
 }

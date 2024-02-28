@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-
+import React, { useEffect, useRef, useState } from "react";
+import oval from "../../assets/Animation/oval.svg";
 import { Token } from "../../constants";
 import { TokenCard } from "./TokenCard";
 
@@ -7,6 +7,9 @@ export const OurTokens: React.FC = () => {
   const [tokensData, setTokensData] = useState<Token[]>([]);
   const [page, setPage] = useState<number>(1);
   const [lastPage, setLastPage] = useState<number>(0);
+
+  const componentRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState<boolean>(false);
 
   const getTokens = async () => {
     try {
@@ -36,8 +39,39 @@ export const OurTokens: React.FC = () => {
     getTokens();
   }, [page]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (componentRef.current) {
+        const rect = componentRef.current.getBoundingClientRect();
+        const isInView =
+          rect.top <= window.innerHeight / 2 &&
+          rect.bottom >= window.innerHeight / 2;
+        setIsVisible(isInView);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const transitionStyles = {
+    transition: "opacity 0.5s ease-in-out",
+    opacity: isVisible ? 1 : 0,
+  };
+
   return (
-    <div className="w-full h-[1400px] pt-[60px] px-0 my-[60px]">
+    <div
+      className="w-full h-[1400px] pt-[60px] px-0 my-[60px] relative"
+      ref={componentRef}
+      style={{ ...transitionStyles }}
+    >
+      <img
+        src={oval}
+        alt="oval"
+        className="floating-oval absolute bottom-0 transform -translate-y-1/2 left-1"
+      />
       <div className="w-full h-[135px] px-30 py-0 flex flex-col justify-center items-center gap-6 ">
         <div className="w-[25%] h-[77.02px] p-2 flex items-center justify-center">
           <p className="w-[95.4%] h-[60px] font-[Kanit] text-[56px] font-semibold leading-[60px] tracking-normal text-center text-white">
