@@ -8,6 +8,7 @@ Full-stack (Frontend and Backend)
 
 ## Deployed App
  Frontend: [bit-universe](https://bituniverse-jk.vercel.app/).
+ <br/>
  Backend: [bit-universe-api](https://bituniverse-api-template.onrender.com/tokens)
  
  ## Directory Structure
@@ -76,15 +77,13 @@ After starting the project, access the frontend application through your web bro
 ### Snapshot 1
 
 <p align="center">
-  <img src="![bit1](https://github.com/jurikalita011/Juri-Kalita-Frontend-Developer/assets/68116821/cab5b5af-5a7c-47d2-8bff-f748306815c8)
-">
+  <img src="![bit1](https://github.com/jurikalita011/Juri-Kalita-Frontend-Developer/assets/68116821/cab5b5af-5a7c-47d2-8bff-f748306815c8)">
 </p>
 
 ### Snapshot 2
 
 <p align="center">
-  <img src="![bit-2](https://github.com/jurikalita011/Juri-Kalita-Frontend-Developer/assets/68116821/885fd7ff-f66a-4cf1-b696-d60854e82189)
-">
+  <img src="![bit-2](https://github.com/jurikalita011/Juri-Kalita-Frontend-Developer/assets/68116821/885fd7ff-f66a-4cf1-b696-d60854e82189)">
 </p>
 
 
