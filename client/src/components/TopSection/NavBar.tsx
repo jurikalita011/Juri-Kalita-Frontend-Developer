@@ -45,8 +45,8 @@ export const NavBar = () => {
         className="w-full h-[88px] flex justify-between items-center border  rounded-2xl border-[rgba(53, 31, 31, 0.31)]
        px-8 py-4 bg-[#342F0E]"
       >
-        <img className="w-[12.11%] h-14 " src={logo} alt="no-logo" />
-        <div className="w-[61%] flex items-center justify-between">
+        <img className="w-[12.11%] h-14 logo" src={logo} alt="no-logo" />
+        <div className="w-[61%] flex items-center justify-between nav-link">
           <div className="w-[72.37%] h-[48.5px] flex items-center justify-center gap-2">
             <div className="w-[17.6%] h-[48.5px] pt-[15px] pr-[24.2px] pb-[16.5px] pl-6 rounded-2xl flex items-center justify-center gap-[10.55px]">
               <p className="h-[17px] w-full font-[Inter] text-[18px] font-medium leading-[17px] tracking-normal text-left text-white">
