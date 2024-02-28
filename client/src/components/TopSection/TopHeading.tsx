@@ -1,15 +1,12 @@
 import React from "react";
+import topImg from "../../assets/TopSection/top.svg";
 import rightArrow from "../../assets/TopSection/rightArrow.svg";
 export const TopHeading = () => {
   return (
-    <div className="w-[72.36%] h-[580px] flex flex-col items-center justify-center border-2 border-yellow-500">
-      <img
-        className="w-[89.63%] h-[403px] border-2 border-red-900"
-        src=""
-        alt="houseImg"
-      />
+    <div className="w-[72.36%] h-[580px] flex flex-col items-center justify-center ">
+      <img className="w-[89.63%] h-[403px]" src={topImg} alt="houseImg" />
       <div className="w-[91.63%] h-[175px]">
-        <p className="my-6 w-full h-10 font-Inter text-[24px] leading-10 font-normal text-center tracking-normal text-[#FDFFE3] border-2 border-blue-900">
+        <p className="my-6 w-full h-10 font-Inter text-[24px] leading-10 font-normal text-center tracking-normal text-[#FDFFE3] ">
           Lorem ipsum dolor sit amet consectetur. Porta amet tellus suspendisse
           id velit proin eleifend id mauris. Amet sem in id eget nunc quam lacus
           tellus augue.

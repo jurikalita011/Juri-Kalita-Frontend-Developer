@@ -37,8 +37,8 @@ export const OurProducts = () => {
   ];
   return (
     <>
-      <div className="w-full h-[135px] px-30 py-0 flex flex-col justify-center items-center gap-6 border-2 border-pink-500">
-        <div className="w-[28%] h-[77.02px] p-2 gap-2 flex items-center justify-center border-2 border-green-500">
+      <div className="w-full h-[135px] px-30 py-0 flex flex-col justify-center items-center gap-6">
+        <div className="w-[28%] h-[77.02px] p-2 gap-2 flex items-center justify-center">
           <p className="w-[95.4%] h-[60px] font-[Kanit] text-[56px] font-semibold leading-[60px] tracking-normal text-center text-white">
             Our{" "}
             <span className="font-[Clash Display] text-[56px] leading-[60px] tracking-normal text-center text-[#FECC00]">
@@ -53,7 +53,7 @@ export const OurProducts = () => {
       </div>
       <div className="w-full flex justify-center items-center my-8">
         <div className="w-[80%] py-0 px-16">
-          <div className="grid grid-cols-3 gap-12 border-2 justify-self-center border-green-100">
+          <div className="grid grid-cols-3 gap-12 justify-self-center">
             {productsData?.map((product, ind) => (
               <ProductsCard {...product} key={ind} />
             ))}
