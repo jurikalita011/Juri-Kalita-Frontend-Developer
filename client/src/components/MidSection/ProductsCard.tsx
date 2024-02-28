@@ -7,7 +7,7 @@ export const ProductsCard = ({ img, title, para }: Products) => {
       <img
         src={img}
         alt="products-err"
-        className="absolute top-5 left-0 right-0 mx-auto"
+        className="absolute top-5 left-0 right-0 mx-auto hover-effect"
       />
       <div className="w-[95%] h-[158px] py-0 px-6 flex flex-col items-center gap-3">
         <p className="w-[83.89%] h-[24px] text-5 leading-6 font-bold tracking-[0.39px] text-white text-center">

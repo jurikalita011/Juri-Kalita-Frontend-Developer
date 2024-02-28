@@ -40,7 +40,7 @@ createWeb3Modal({
 export const NavBar = () => {
   const { open } = useWeb3Modal();
   return (
-    <div className="flex justify-center items-center m-[40px]">
+    <div className="flex justify-center items-center m-[40px] sticky z-10 top-10 opacity-80">
       <div
         className="w-full h-[88px] flex justify-between items-center border  rounded-2xl border-[rgba(53, 31, 31, 0.31)]
        px-8 py-4 bg-[#342F0E]"
