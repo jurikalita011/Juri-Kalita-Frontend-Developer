@@ -27,10 +27,8 @@ const config = defaultWagmiConfig({
   enableInjected: true, // Optional - true by default
   enableEIP6963: true, // Optional - true by default
   enableCoinbase: true, // Optional - true by default
-  // Any additional options can be provided here
 });
 
-// 3. Create modal
 createWeb3Modal({
   wagmiConfig: config,
   projectId,
@@ -39,6 +37,7 @@ createWeb3Modal({
 
 export const NavBar = () => {
   const { open } = useWeb3Modal();
+
   return (
     <div className="flex justify-center items-center m-[40px] sticky z-10 top-10 opacity-80">
       <div
@@ -48,23 +47,23 @@ export const NavBar = () => {
         <img className="w-[12.11%] h-14 logo" src={logo} alt="no-logo" />
         <div className="w-[61%] flex items-center justify-between nav-link">
           <div className="w-[72.37%] h-[48.5px] flex items-center justify-center gap-2">
-            <div className="w-[17.6%] h-[48.5px] pt-[15px] pr-[24.2px] pb-[16.5px] pl-6 rounded-2xl flex items-center justify-center gap-[10.55px]">
-              <p className="h-[17px] w-full font-[Inter] text-[18px] font-medium leading-[17px] tracking-normal text-left text-white">
+            <div className="cursor-pointer w-[17.6%] h-[48.5px] pt-[15px] pr-[24.2px] pb-[16.5px] pl-6 rounded-2xl flex items-center justify-center gap-[10.55px]">
+              <p className="h-[17px] w-full text-[18px] font-medium leading-[17px] tracking-normal text-left text-white">
                 About
               </p>
             </div>
             <div className="w-[28.2%] h-[48.5px] pt-[15px] pr-[24.2px] pb-[16.5px] pl-6 rounded-2xl flex items-center justify-center gap-[10.55px]">
-              <p className="h-[17px]  font-[Inter] text-[18px] font-medium leading-[17px] tracking-normal text-left text-white">
+              <p className="cursor-pointer h-[17px] text-[18px] font-medium leading-[17px] tracking-normal text-left text-white">
                 Our Products
               </p>
             </div>
-            <div className="w-[27.22%] h-[48.5px] pt-[15px] pr-[24.2px] pb-[16.5px] pl-6 rounded-2xl flex items-center justify-center gap-[10.55px]">
-              <p className="h-[17px] font-[Inter] text-[18px] font-medium leading-[17px] tracking-normal text-left text-white ">
+            <div className="cursor-pointer w-[27.22%] h-[48.5px] pt-[15px] pr-[24.2px] pb-[16.5px] pl-6 rounded-2xl flex items-center justify-center gap-[10.55px]">
+              <p className="h-[17px] text-[18px] font-medium leading-[17px] tracking-normal text-left text-white ">
                 Token Utility
               </p>
             </div>
-            <div className="w-[22.69%] h-[48.5px] pt-[15px] pr-[24.2px] pb-[16.5px] pl-6 rounded-2xl flex items-center justify-center gap-[10.55px]">
-              <p className="h-[17px] font-[Inter] text-[18px] font-medium leading-[17px] tracking-normal text-left text-white ">
+            <div className="cursor-pointer w-[22.69%] h-[48.5px] pt-[15px] pr-[24.2px] pb-[16.5px] pl-6 rounded-2xl flex items-center justify-center gap-[10.55px]">
+              <p className="h-[17px] text-[18px] font-medium leading-[17px] tracking-normal text-left text-white ">
                 Roadmap
               </p>
             </div>
@@ -73,7 +72,7 @@ export const NavBar = () => {
             onClick={() => open()}
             className="w-[23.58%] h-[55px] flex items-center justify-center rounded-[10px] bg-[#F9D326]"
           >
-            <p className="w-[70.05%] h-[17px] font-medium text-center">
+            <p className="w-[70.05%] h-[17px] text-[18px] font-medium text-center">
               Connect Wallet
             </p>
           </button>

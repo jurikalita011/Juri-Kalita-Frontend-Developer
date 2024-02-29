@@ -57,7 +57,7 @@
 /*--------------------------------------------------------------X---Product Card---X--------------------------------------------------------------------------*/
 
 .jump-animation img {
-  animation: jump-rotate 0.8s ease-in-out;
+  animation: jump-rotate 0.9s ease-in-out;
 }
 
 @keyframes jump-rotate {
@@ -65,7 +65,7 @@
     transform: translateY(0) rotate(0deg);
   }
   50% {
-    transform: translateY(-60px) rotate(-25deg);
+    transform: translateY(-70px) rotate(-33deg);
   }
   100% {
     transform: translateY(0) rotate(0deg);
@@ -74,7 +74,7 @@
 
 .hover-effect:hover {
   cursor: pointer;
-  animation: jump-rotate 0.8s ease-in-out;
+  animation: jump-rotate 0.9s ease-in-out;
 }
 
 /*--------------------------------------------------------------X---Floating Images---X--------------------------------------------------------------------------*/

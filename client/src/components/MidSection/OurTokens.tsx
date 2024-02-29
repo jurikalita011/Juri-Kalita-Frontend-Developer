@@ -106,7 +106,7 @@ export const OurTokens: React.FC = () => {
             <div className="flex w-full justify-evenly mt-10">
               <div className="shadow-xl">
                 <button
-                  className="text-black bg-white rounded-md py-2 px-4 w-[100px]"
+                  className="cursor-pointer text-black bg-white rounded-md py-2 px-6 w-[100px]"
                   onClick={handlePrevButton}
                   disabled={page === 1}
                 >
@@ -118,7 +118,7 @@ export const OurTokens: React.FC = () => {
               </span>
               <div className="shadow-xl">
                 <button
-                  className="text-black bg-white rounded-md py-2 px-4 w-[100px]"
+                  className="cursor-pointer text-black bg-white rounded-md py-2 px-6 w-[100px]"
                   onClick={handleNextButton}
                   disabled={page === lastPage}
                 >

@@ -6,7 +6,6 @@ import bBridge from "../../assets/MidSection/OurProducts/bBridge.svg";
 import bPad from "../../assets/MidSection/OurProducts/bPad.svg";
 import bLend from "../../assets/MidSection/OurProducts/bLend.svg";
 import cubeMid from "../../assets/Animation/cubeMid.svg";
-import seven from "../../assets/Animation/seven.svg";
 
 import { ProductsCard } from "./ProductsCard";
 

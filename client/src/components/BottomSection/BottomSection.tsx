@@ -32,12 +32,12 @@ export const BottomSection = () => {
 
   return (
     <div
-      className="flex flex-col items-center justify-center border-2 border-blue-500 relative"
+      className="flex flex-col items-center justify-center relative"
       ref={componentRef}
       style={{ ...transitionStyles }}
     >
       <div className="flex justify-around border-2 border-[#f9d326] py-8 rounded-t-3xl rounded-b-3xl w-[78%]">
-        <div className="flex flex-col gap-2 text-4xl text-left border-2 border-violet-500">
+        <div className="flex flex-col gap-2 text-4xl text-left">
           <p className="text-white">Join Our</p>
           <p className="text-yellow-500">Community</p>
         </div>

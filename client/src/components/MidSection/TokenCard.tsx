@@ -30,7 +30,7 @@ export const TokenCard = ({
         <p className="text-[#CFCFCF]">Chain</p>
         <p className="text-[#CFCFCF]">{chain}</p>
       </div>
-      <button className="w-[40%] h-[px] rounded-2xl mt-8">
+      <button className="cursor-pointer w-[40%] h-[px] rounded-2xl mt-8">
         <div className="w-[95.4%] h-[47px] border-2 border-white rounded-2xl flex justify-center items-center gap-1 pt-[10px] pr-5 pb-[10px] pl-6 bg-gradient-to-r from-[#FECC00] to-[#FEA800]">
           <p className=" w-[100%] font-[Inter] text-left text-4 leading-7 tracking-normal text-[#FFFFFF]">
             Details
