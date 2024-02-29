@@ -6,7 +6,7 @@ import { TokenCard } from "./TokenCard";
 export const OurTokens: React.FC = () => {
   const [tokensData, setTokensData] = useState<Token[]>([]);
   const [page, setPage] = useState<number>(1);
-  const [lastPage, setLastPage] = useState<number>(0);
+  const [lastPage, setLastPage] = useState<number>(1);
 
   const componentRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState<boolean>(false);
@@ -19,7 +19,7 @@ export const OurTokens: React.FC = () => {
       let data = await res.json();
       console.log("Fetched data:", data);
       setTokensData(data.data);
-      setLastPage(Math.ceil(data.data.length / 6));
+      setLastPage(Math.ceil(data.total / 6));
     } catch (error) {
       console.log(error);
     }
