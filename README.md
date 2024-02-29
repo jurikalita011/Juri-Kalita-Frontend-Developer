@@ -5,11 +5,17 @@ This project is a web application built using React Typescript and Express.js, f
 
 ## Project Type
 Full-stack (Frontend and Backend)
-
+ 
 ## Deployed App
- Frontend: [bit-universe](https://bituniverse-jk.vercel.app/).
- <br/>
- Backend: [bit-universe-api](https://bituniverse-api-template.onrender.com/tokens)
+ Frontend: [bit-universe](https://bituniverse-jk.vercel.app/)
+## APIs Used
+Backend: [bit-universe-api](https://bituniverse-api-template.onrender.com/)
+<br/>
+Backend Github: [Backend GitHub repository link](https://github.com/jurikalita011/bitUniverse-api-template)
+## API Endpoints
+
+* GET /api/tokens - retrieve all items
+* POST /api/tokens - create a new token
  
  ## Directory Structure
 ```bash
@@ -41,15 +47,17 @@ Full-stack (Frontend and Backend)
 ├─ package-lock.json
 ├─ package.json
 ```
-
+## Video Walkthrough of the project
+[Project-preview](https://drive.google.com/file/d/1f_V3ZRMdoxf3GAO_IkY29Vv-VMk3yXiE/view?usp=sharing)
 ## Features
 * Integration of a backend server using Node.js and Express to serve token data.
 * Display token information fetched from the backend server using React components.
 * Implementation of WalletConnect functionality to allow users to connect their wallets.
-* UI built based on the provided Figma design to enhance the user experience.
+* UI built based on the provided Figma design to enhance the user experience using various animations.
 ## Design Decisions or Assumptions
 * WalletConnect functionality is integrated using the provided WalletConnect tool.
 * Provided pagination to show 6 token card data per page.
+* Animations are implemented in accordance with the provided animation reference to achieve the expected transition effects.
 
 ## Installation & Getting started
 To set up the project on your local system, follow these steps:
@@ -76,22 +84,27 @@ The app will be running on `http://localhost:3000/`.
 After starting the project, access the frontend application through your web browser. You can view token information displayed on the homepage and connect your wallet using the WalletConnect functionality.
 ### Snapshot 1
 
-<p align="center">
-  <img src="![bit1](https://github.com/jurikalita011/Juri-Kalita-Frontend-Developer/assets/68116821/cab5b5af-5a7c-47d2-8bff-f748306815c8)">
-</p>
+ 
+![b1](https://github.com/jurikalita011/Juri-Kalita-Frontend-Developer/assets/68116821/9cae162e-0da4-49b0-af61-c0f05bf319af)
+
+
 
 ### Snapshot 2
 
-<p align="center">
-  <img src="![bit-2](https://github.com/jurikalita011/Juri-Kalita-Frontend-Developer/assets/68116821/885fd7ff-f66a-4cf1-b696-d60854e82189)">
-</p>
+![b2](https://github.com/jurikalita011/Juri-Kalita-Frontend-Developer/assets/68116821/5b22e0a9-ac4a-4afa-8d30-73cddd7917ab)
 
+### Snapshot 3
 
-## Credentials
-No authentication is required to access the project.
+![b3](https://github.com/jurikalita011/Juri-Kalita-Frontend-Developer/assets/68116821/753ed91c-bdd2-4fb9-be3f-382d1336004b)
+
+### Snapshot 4
+
+![b4](https://github.com/jurikalita011/Juri-Kalita-Frontend-Developer/assets/68116821/e8fa68f6-b60b-42bb-914d-ca3d8fd79769)
+
 
 ## Technology Stack
 * React.js: A JavaScript library for building user interfaces, providing a component-based approach to developing web apps.
 * TypeScript: A statically typed superset of JavaScript that enhances code maintainability and scalability by identifying errors during development.
 * Express.js: A minimalist web framework for Node.js, providing a robust set of features for web and mobile applications.
 * Tailwind CSS: A utility-first CSS framework for rapidly building custom designs without having to leave your HTML.
+* MongoDB: MongoDB is a NoSQL database that stores data in flexible, JSON-like documents. It offers high scalability, flexibility, and performance for handling large volumes of data. MongoDB's document model is well-suited for modern web applications, as it allows for dynamic schema design and seamless integration with JavaScript-based stacks like Node.js.
